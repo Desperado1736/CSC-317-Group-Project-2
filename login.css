@@ -21,6 +21,13 @@
      background-image: url("https://media.istockphoto.com/id/1409236261/photo/healthy-food-healthy-eating-background-fruit-vegetable-berry-vegetarian-eating-superfood.jpg?s=612x612&w=0&k=20&c=kYZKgwsQbH_Hscl3mPRKkus0h1OPuL0TcXxZcO2Zdj0=");
 
 }
+.form-popup .close-btn{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: gray;
+  cursor: pointer;  
+}
 .form-box h2{
     text-align: center;
     margin-bottom: 30px;
@@ -88,4 +95,11 @@ form button{
 .form-box .forgot-pass{
    padding-top: 10px;
    display: inline-flex;
+}
+.policy-text{
+    text-align: center;
+    padding-top: 10px;
+}
+.btn-txt{
+    font-size: 1rem;
 }
