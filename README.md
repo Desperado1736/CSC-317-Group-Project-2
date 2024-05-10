@@ -1,0 +1,1 @@
+Credits SVG image for shopping cart: https://iconduck.com/icons/117068/shopping-cart

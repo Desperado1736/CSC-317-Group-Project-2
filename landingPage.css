@@ -41,3 +41,44 @@ header {
     .tab:hover {
         background-color: #f1f1f1;
     }
+
+    .shopping-cart {
+        position: relative;
+    }
+    
+    .shopping-cart img {
+        width: 85px; /* Decrease size */
+        height: 85px; /* Decrease size */
+        margin-right: -10px; 
+        margin-top:-55px;
+        border-radius: 10px;
+        padding: 10px 20 px;
+    }
+
+    .login-cart {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    
+    .login-cart .tab {
+        margin-right: 10px;
+    }
+    
+    .login-cart .tab:first-child {
+        margin-right: -10px; 
+        position: absolute; 
+        top: 45px; 
+        right: -300px; 
+        /* background-color: #328EE4;  */
+        background: linear-gradient(to right, #72c9ff,pink);
+        color: #000000; 
+        padding: 10px 20px;
+        border-radius: 15px; 
+        text-decoration: none;
+        width: 75px;
+        height: 30px;
+        font-size: 25px;
+        align-content: center;
+    }
+
