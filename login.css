@@ -1,3 +1,6 @@
+body{
+    background-color: greenyellow;
+}
 .form-popup{
     position: fixed;
     top:50%;
@@ -5,7 +8,7 @@
     max-width: 720px;
     width: 100%;
     background: white;
-    border: 2px solid green;
+    border: 2px solid white;
     transform: translate(-50%,-50%);
 }
 .form-popup .form-box{
@@ -72,7 +75,7 @@ color:gray;
 
 }
 .form-box a{
-    color:gray;
+    color:green;
     text-decoration: none;
     
 }
@@ -89,7 +92,7 @@ form button{
     border-radius: 3px;
     margin: 25px 0;
     color: white;
-    background: gray;
+    background:gray;
     cursor: pointer;
 }
 .form-box .forgot-pass{
