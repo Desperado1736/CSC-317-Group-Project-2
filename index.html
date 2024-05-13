@@ -24,6 +24,34 @@
                 </a>
             
         </div>
+
     </header>
+    <div class="fill-left"></div>
+    <div class="fill-right"></div>
+    <div class="banner">
+    <script>
+        const banner = document.querySelector('.banner');
+        const images= [
+            './slide2.png',
+            './slide3.png',
+            './slide4.png',
+            './slide1.png'
+
+        ]
+
+        let index =0;
+
+        function changeImage(){
+            banner.style.background = `url('${images[index]}') center/auto 100% no-repeat`;
+            index = (index + 1) % images.length;
+
+        }
+
+        setInterval(changeImage, 7000);
+
+    </script>
+    </div>
+    <div class="fill-under"></div>
+   
 </body>
 </html>
