@@ -115,37 +115,93 @@ header {
     }
 
     h1{
-        padding: 10px 20px;
+        padding: 10px 10px;
         margin-right: 10px;
         background-color: #1cb97a;
         color: #000000;
         width:375px;
         text-decoration: none;
         border-radius: 15px;
-        font-family: 'Oswald', sans-serif;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 50px;
         margin-top: 60px;
     }
 
     .items{
-        background-color: aliceblue;
+        background-color: rgb(120, 166, 206);
         width: 100%;
       
         margin-left: -5px;
     }
 
-    .milk{
+    .milk-image{
         height: auto;
         width: auto;
         margin-left: 50px;
+
     }
-    .bread{
-        height: 270px;
-        width:230px;
+
+    .milk-info{
+        margin-left: 50px;
+        
+    }
+
+    .bread-image{
+        height: 300px;
+        width:270px;
         margin-left: 100px;
     }
-    .eggs{
-        height: 270px;
+
+    .bread-info {
+        margin-top: -155px;
+        margin-left: 450px;
+    }
+
+    .eggs-image{
+        height: 300px;
         width: 300px;
         margin-left: 130px;
     }
+
+    .eggs-info{
+        margin-left: 860px;
+        margin-top: -155px;
+    }
+    
+
+.add-to-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #e93c3c; 
+    color: #FFFFFF; 
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+.add-to-cart:hover {
+    background-color: pink; 
+    color: #000000;
+    
+}
+
+.offer-button{
+    display: inline-block;
+    padding: 10px 18px;
+    margin-top: 10px;
+    background-color: #3ce94b; 
+    color: #400cce; 
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
