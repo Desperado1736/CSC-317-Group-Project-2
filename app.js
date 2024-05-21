@@ -16,7 +16,7 @@ const db = new sqlite3.Database("./data.db", sqlite3.OPEN_READWRITE, (err) => {
 });
 
 //creates users table if doesn't exist. makes it so two users can't have same email
-let sql = 'CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY,first_name TEXT,last_name TEXT,password INTEGER,email TEXT, UNIQUE(email))';
+let sql = 'CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY,first_name TEXT,last_name TEXT,password TEXT,email TEXT, UNIQUE(email))';
 //runs above code 
 db.run(sql);
 app.use(express.static(__dirname));
@@ -49,19 +49,19 @@ app.post("/sign-up.html",(req, res) => {
 
 })
 app.post("/login.html", (req, res) => {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
     //Does a query in sqlite
-    const query = `SELECT * FROM users WHERE username = '${username}' `;
+    const query = `SELECT * FROM users WHERE email = '${email}' `;
     db.get(query, (err, row) => {
         if (err) {
           console.error(err.message);
-        } else if (row.username!==username) {
-          console.error('Username not found');
+        } else if (row.email !== email) {
+          console.error('Email not found');
         } else if (row.password !== password) {
           console.error('Incorrect password');
         } else {
-          console.log('Username and password match');
-          res.redirect("profile.html");
+          console.log('email and password match');
+          res.redirect("./Profilepage.html");
 
         }
       });
