@@ -96,7 +96,7 @@ header {
     background-repeat: no-repeat;
     margin-top: 125px;
     background-size: contain; 
-        background: url(../resources/slide1.png) center/auto 100% no-repeat; 
+        background: url(../views/resources/slide1.png) center/auto 100% no-repeat; 
         transition: background 0.5s ease;
         z-index: 1;
     }
