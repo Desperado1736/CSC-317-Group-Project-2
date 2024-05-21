@@ -21,6 +21,7 @@ let sql = 'CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY,first_name TE
 db.run(sql);
 //routes for all html/css/imgs
 app.use(express.static(path.join(__dirname,'../views')))
+app.use('/styles',express.static(path.join(__dirname,'../styles')))
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../index.html'));
