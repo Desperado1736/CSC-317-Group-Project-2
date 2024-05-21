@@ -54,6 +54,15 @@ app.post("/sign-up.html",(req, res) => {
             }
             // get the last insert id
             console.log(`A row has been inserted with rowid ${this.lastID}`);
+            const query = `SELECT * FROM users`;
+    db.each(query,(err, row) => {
+      if (err) {
+        throw err;
+      }
+      
+        console.log(`${row.password} - ${row.email}`);
+      ;
+    });
             //redirects to login when done
             res.redirect("./login.html");
             });
@@ -78,6 +87,7 @@ app.post("/login.html", (req, res) => {
           console.error('Incorrect password');
         } else {
           console.log('email and password match');
+          console.log('redirecting you to profile page')
           res.redirect("./Profilepage.html");
 
         }
