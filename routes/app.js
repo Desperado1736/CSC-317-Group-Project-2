@@ -22,7 +22,7 @@ db.run(sql);
 //routes for all html/css/imgs
 app.use(express.static(path.join(__dirname,'../views')))
 app.use('/styles',express.static(path.join(__dirname,'../styles')))
-app.use(express.static('/Users/Anuj/CSC-317-Group-Project-2/resources'));
+
 
 
 app.get('/', (req, res) => {
