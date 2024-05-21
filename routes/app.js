@@ -19,7 +19,21 @@ const db = new sqlite3.Database("./data.db", sqlite3.OPEN_READWRITE, (err) => {
 let sql = 'CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY,first_name TEXT,last_name TEXT,password TEXT,email TEXT, UNIQUE(email))';
 //runs above code 
 db.run(sql);
-app.use(express.static(__dirname));
+//routes for all html/css/imgs
+app.use(express.static(path.join(__dirname,'../views')))
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../index.html'));
+});
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../register.html'));
+});
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../sign-up.html'));
+});
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../profile.html'));
+});
 
 //listens for posts requests in sign-up.html aka the sign up form
 app.post("/sign-up.html",(req, res) => {
