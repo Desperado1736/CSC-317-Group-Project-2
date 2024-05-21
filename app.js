@@ -8,7 +8,11 @@ const sqlite3 = require('sqlite3').verbose();
 app.use(express.urlencoded({extended: false}));
 
 const db = new sqlite3.Database("./data.db", sqlite3.OPEN_READWRITE, (err) => {
-    if (err) return console.error(err.messgae);
+    if (err) {
+        console.error('Error when creating the database', err.message);
+    } else {
+        console.log('Database created successfully');
+    }
 });
 
 //creates users table if doesn't exist. makes it so two users can't have same email
@@ -44,7 +48,18 @@ app.post("/sign-up.html",(req, res) => {
     }
 
 })
-
+app.post("/login.html", (req, res) => {
+    const { email, password } = req.body;
+    const query = `SELECT * FROM users WHERE email = '${email}' AND password = '${password}'`;
+    db.get(query, (error, results) => {
+        if (error) {
+            console.log("wrong password")
+        } else {
+           // console.log(`${results.first_name} ${results.last_name} - ${results.email}`);
+            res.redirect("./Profilepage.html");
+        }
+    });
+})
 
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
