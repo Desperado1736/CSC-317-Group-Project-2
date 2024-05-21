@@ -49,16 +49,23 @@ app.post("/sign-up.html",(req, res) => {
 
 })
 app.post("/login.html", (req, res) => {
-    const { email, password } = req.body;
-    const query = `SELECT * FROM users WHERE email = '${email}' AND password = '${password}'`;
-    db.get(query, (error, results) => {
-        if (error) {
-            console.log("wrong password")
+    const { username, password } = req.body;
+    //Does a query in sqlite
+    const query = `SELECT * FROM users WHERE username = '${username}' `;
+    db.get(query, (err, row) => {
+        if (err) {
+          console.error(err.message);
+        } else if (row.username!==username) {
+          console.error('Username not found');
+        } else if (row.password !== password) {
+          console.error('Incorrect password');
         } else {
-           // console.log(`${results.first_name} ${results.last_name} - ${results.email}`);
-            res.redirect("./Profilepage.html");
+          console.log('Username and password match');
+          res.redirect("profile.html");
+
         }
-    });
+      });
+    
 })
 
 app.listen(3000, () => {
