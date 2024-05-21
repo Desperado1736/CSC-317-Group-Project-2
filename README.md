@@ -1,12 +1,12 @@
-#PURPOSE OF PROJECT:
+# PURPOSE OF PROJECT:
 The purpose of this project is to create an e-commerce website consisting of a landing page, login page, signup page and profile page. The mock website is selling grocery items.
 
-#CONTRIBUTORS:
+# CONTRIBUTORS:
 - Anuj Kumar
 - Ethan Niu
 - Vedant Joshi
 
-#RESOURCES USED:
+# RESOURCES USED:
 
 ## Credits SVG image for shopping cart: 
 https://iconduck.com/icons/117068/shopping-cart
