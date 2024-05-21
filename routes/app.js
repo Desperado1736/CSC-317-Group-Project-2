@@ -22,18 +22,19 @@ db.run(sql);
 //routes for all html/css/imgs
 app.use(express.static(path.join(__dirname,'../views')))
 app.use('/styles',express.static(path.join(__dirname,'../styles')))
+app.use('/resources',express.static(path.join(__dirname,'../resources')))
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../index.html'));
 });
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../register.html'));
+  res.sendFile(path.join(__dirname, '../login.html'));
 });
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../sign-up.html'));
 });
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../profile.html'));
+  res.sendFile(path.join(__dirname, '../Profilepage.html'));
 });
 
 //listens for posts requests in sign-up.html aka the sign up form
