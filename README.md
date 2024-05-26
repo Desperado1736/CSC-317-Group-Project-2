@@ -1,3 +1,5 @@
+# DEPLOYED WEBSITE: https://csc-317-group-project-2-37zk.onrender.com/
+
 # PURPOSE OF PROJECT:
 The purpose of this project is to create an e-commerce website consisting of a landing page, login page, signup page and profile page. The mock website is selling grocery items.
 
