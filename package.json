@@ -4,9 +4,15 @@
   "description": "Credits SVG image for shopping cart: https://iconduck.com/icons/117068/shopping-cart",
   "main": "login-signup.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node routes/app.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.7"
+  }
 }
