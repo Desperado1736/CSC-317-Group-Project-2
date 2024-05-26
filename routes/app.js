@@ -7,7 +7,7 @@ const sqlite3 = require('sqlite3').verbose();
 
 app.use(express.urlencoded({extended: false}));
 
-const db = new sqlite3.Database("./data.db", sqlite3.OPEN_READWRITE, (err) => {
+const db = new sqlite3.Database(path.resolve(__dirname, 'data.db'), sqlite3.OPEN_READWRITE, (err) => {
     if (err) {
         console.error('Error when creating the database', err.message);
     } else {
