@@ -9,12 +9,11 @@ The purpose of this project is to create an e-commerce website consisting of a l
 - Ethan Niu
 - Vedant Joshi
 
+# REPORT:
+[FINAL.REPORT.pdf](https://github.com/Desperado1736/CSC-317-Group-Project-2/files/15450216/FINAL.REPORT.pdf)
+
+
 # RESOURCES USED:
-
-#REPORT:
-[FINAL REPORT.pdf](https://github.com/Desperado1736/CSC-317-Group-Project-2/files/15450202/FINAL.REPORT.pdf)
-
-
 ## Credits SVG image for shopping cart: 
 https://iconduck.com/icons/117068/shopping-cart
 ## Youtube video that helped us do the database part of the project 
